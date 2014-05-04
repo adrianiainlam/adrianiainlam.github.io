@@ -3,6 +3,33 @@ function Grid(size, previousState) {
   this.cells = previousState ? this.fromState(previousState) : this.empty();
 }
 
+Grid.prototype.clone = function() {
+  var new_grid = new Grid(this.size);
+  new_grid.build();
+  for(var x=0; x<this.size; x++) {
+    for(var y=0; y<this.size; y++) {
+      if(this.cells[x][y]==null) {
+        new_grid.cells[x][y]=null;
+      } else {
+        new_grid.cells[x][y]=this.cells[x][y].clone();
+      }
+    }
+  }
+  return new_grid;
+};
+
+/* almost entirely the same as Grid.prototype.empty,
+ * but I'm too lazy / stupid to figure out what's going on,
+ * so I'll just copy it verbatim from the Undo button version */
+Grid.prototype.build = function() {
+  for(var x=0; x<this.size; x++) {
+    var row = this.cells[x] = [];
+    for(var y=0; y<this.size; y++) {
+      row.push(null);
+    }
+  }
+};
+
 // Build a grid of the specified size
 Grid.prototype.empty = function () {
   var cells = [];

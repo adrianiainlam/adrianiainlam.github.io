@@ -1,13 +1,16 @@
-function GameManager(size, InputManager, Actuator, StorageManager) {
+function GameManager(size, InputManager, Actuator, StorageManager, BottomlessStack) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
 
+  this.history        = new BottomlessStack(100);
+
   this.startTiles     = 2;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
+  this.inputManager.on("undo", this.undo.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
 
   this.setup();
@@ -18,6 +21,31 @@ GameManager.prototype.restart = function () {
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
+};
+
+GameManager.prototype.undo = function() {
+  this.loadSavedState();
+  this.actuate();
+  this.actuator.clearMessage();
+};
+
+GameManager.prototype.saveState = function() {
+  this.history.push({
+    grid  : this.grid.clone(),
+    score : this.score,
+    over  : this.over,
+    won   : this.won
+  });
+};
+
+GameManager.prototype.loadSavedState = function() {
+  var old_state = this.history.pop();
+  if(old_state) {
+    this.grid  = old_state.grid;
+    this.score = old_state.score;
+    this.over  = old_state.over;
+    this.won   = old_state.won;
+  }
 };
 
 // Keep playing after winning (allows going over 2048)
@@ -97,6 +125,7 @@ GameManager.prototype.actuate = function () {
     over:       this.over,
     won:        this.won,
     bestScore:  this.storageManager.getBestScore(),
+    history: ! this.history.isEmpty(),
     terminated: this.isGameTerminated()
   });
 
@@ -142,6 +171,9 @@ GameManager.prototype.move = function (direction) {
   var vector     = this.getVector(direction);
   var traversals = this.buildTraversals(vector);
   var moved      = false;
+
+  //backup for undo
+  this.saveState();
 
   // Save the current tile positions and remove merger information
   this.prepareTiles();

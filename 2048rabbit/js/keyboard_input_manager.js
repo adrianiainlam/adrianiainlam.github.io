@@ -75,6 +75,9 @@ KeyboardInputManager.prototype.listen = function () {
   this.bindButtonPress(".retry-button", this.restart);
   this.bindButtonPress(".restart-button", this.restart);
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
+  
+  var undo = document.getElementById("undo-button");
+  undo.addEventListener("click", this.undo.bind(this));
 
   // Respond to swipe events
   var touchStartClientX, touchStartClientY;
@@ -150,4 +153,9 @@ KeyboardInputManager.prototype.bindButtonPress = function (selector, fn) {
 
 KeyboardInputManager.prototype.targetIsInput = function (event) {
   return event.target.tagName.toLowerCase() === "input";
+};
+
+KeyboardInputManager.prototype.undo = function(event) {
+  event.preventDefault();
+  this.emit("undo");
 };

@@ -21,16 +21,25 @@
     <div class="heading">
       <h1 class="title">2048 - Raise Your Rabbit</h1>
       <div class="scores-container">
+		  <div id="undo-button" style=
+		 "display: inline-block;
+		  background: #8f7a66;
+		  padding: 0 10px;
+		  margin: 10px;
+		  border-radius: 3px;
+		  text-decoration: none;
+		  color: #f9f6f2;
+		  height: 40px;
+		  line-height: 42px;
+		  display: block;
+		  text-align: center;
+		  float: left;">Undo</div>
 		<a class="restart-button">New Game</a>
         <div class="score-container">0</div>
         <div class="best-container">0</div>
         
       </div>
     </div>
-<!--
-    <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>biggest rabbit!</strong></p>
-    </div> -->
 
     <div class="game-container">
       <div class="game-message">
@@ -75,7 +84,9 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles.
+      When two tiles with the same number touch, they <strong>merge into one,</strong>
+      and the rabbit grows <strong>bigger!</strong>
     </p>
     <hr>
     <p>
@@ -83,7 +94,10 @@
     </p>
     <hr>
     <p>
-    Modified version based on <a href="https://googledrive.com/host/0Bwfwejg8DXhOVVNaeWRBNEZTRFk/index.html" target="_blank">this fork created by the IMO 2016 Organising Committee</a>. Original version created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    Modified version based on <a href="https://googledrive.com/host/0Bwfwejg8DXhOVVNaeWRBNEZTRFk/index.html" target="_blank">this fork created by the IMO 2016 Organising Committee</a>.
+    Undo button based on <a href="http://jonchui.github.io/2048-with-UNDO/" target="_blank">this fork created by Jon Chui.</a>
+    Original version created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a>
+    Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
     </p>
   </div>
 
@@ -95,8 +109,9 @@
   <script src="js/grid.js"></script>
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
+  <script src="js/bottomless_stack.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
-
+  <!-- Happy 17th birthday, Sofi. -->
 </body>
 </html>

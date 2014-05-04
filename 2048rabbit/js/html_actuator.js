@@ -4,6 +4,7 @@ function HTMLActuator() {
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
   this.sharingContainer = document.querySelector(".score-sharing");
+  this.undoButton       = document.querySelector("#undo-button");
 
   this.score = 0;
 }
@@ -116,59 +117,6 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   // Put the tile on the board
   this.tileContainer.appendChild(wrapper);
-};  
-
-function HTMLActuator() {
-  this.tileContainer    = document.querySelector(".tile-container");
-  this.scoreContainer   = document.querySelector(".score-container");
-  this.bestContainer    = document.querySelector(".best-container");
-  this.messageContainer = document.querySelector(".game-message");
-  this.sharingContainer = document.querySelector(".score-sharing");
-
-  this.score = 0;
-}
-
-HTMLActuator.prototype.actuate = function (grid, metadata) {
-  var self = this;
-
-  window.requestAnimationFrame(function () {
-    self.clearContainer(self.tileContainer);
-
-    grid.cells.forEach(function (column) {
-      column.forEach(function (cell) {
-        if (cell) {
-          self.addTile(cell);
-        }
-      });
-    });
-
-    self.updateScore(metadata.score);
-    self.updateBestScore(metadata.bestScore);
-
-    if (metadata.terminated) {
-      if (metadata.over) {
-        self.message(false); // You lose
-      } else if (metadata.won) {
-        self.message(true); // You win!
-      }
-    }
-
-  });
-};
-
-// Continues the game (both restart and keep playing)
-HTMLActuator.prototype.continueGame = function () {
-  if (typeof ga !== "undefined") {
-    ga("send", "event", "game", "restart");
-  }
-
-  this.clearMessage();
-};
-
-HTMLActuator.prototype.clearContainer = function (container) {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
 };
 
 HTMLActuator.prototype.applyClasses = function (element, classes) {
@@ -183,8 +131,6 @@ HTMLActuator.prototype.positionClass = function (position) {
   position = this.normalizePosition(position);
   return "tile-position-" + position.x + "-" + position.y;
 };
-  
-  
 
 HTMLActuator.prototype.updateScore = function (score) {
   this.clearContainer(this.scoreContainer);
