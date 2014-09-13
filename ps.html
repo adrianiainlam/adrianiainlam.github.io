@@ -20,8 +20,11 @@ A copy of the GNU General Public License can be found at
 Contact: <00alam@brightoncollege.net>
 -->
 <head>
-    <title>UCAS Personal Statement Word Counter</title>
+    <title>UCAS Personal Statement Line &amp; Character Counter</title>
     <meta charset="utf-8" />
+    <meta name="description" content="Confused by UCAS's way of counting lines and characters? Click here for a detailed analysis." />
+    <meta name="author" content="Adrian Iain Lam" />
+    <meta name="copyright" content="Copyright (c) 2014 Adrian Iain Lam. Licensed under GNU GPL." />
     <script>
     $ = document.getElementById.bind(document);
     function printStats(lines, numLines, numChars, parasWithExtraSpace, parasLines) {
@@ -113,6 +116,7 @@ Contact: <00alam@brightoncollege.net>
             visibility: hidden;
         }
     </style>
+    <!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -121,9 +125,10 @@ Contact: <00alam@brightoncollege.net>
         ga('create', 'UA-54745078-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <!-- / Google Analytics -->
 </head>
 <body onload="autocheck()">
-    <h1>UCAS Personal Statement Word Counter</h1>
+    <h3>UCAS Personal Statement Line &amp; Character Counter</h3>
     <div id="txtContainer">
         Paste your personal statement here!<br />
         <textarea id="txt1"></textarea>
@@ -149,7 +154,10 @@ Contact: <00alam@brightoncollege.net>
             <p class="note">Copyright (c) 2014 Adrian Iain Lam<br />This program is free software, and you are welcome to redistribute it under the terms of the GNU GPL. This program comes with ABSOLUTELY NO WARRANTY. View the source for details.</p>
             <p class="note">This site is not affiliated with, endorsed by, approved by, or related to UCAS.</p>
             <p class="note">Unlike <a href="http://maccery.com/ps/" target="_blank">the counter by Maccery</a>, no personal statements are sent to the hosting server. All codes are executed on the client-side.</p>
+            <!-- Anonymous Ads -->
             <p>Advertisement:</p><iframe data-aa='40362' src='//ad.a-ads.com/40362?size=300x250' style='width:300px; height:250px; border:0px; padding:0;overflow:hidden'></iframe>
+            <!-- / Anonymous Ads -->
+            <!-- Wanted to use Google AdSense but I need to be 18... -->
         </div>
     </div>
 </body>
