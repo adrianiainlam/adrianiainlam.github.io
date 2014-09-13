@@ -62,9 +62,9 @@ Contact: <00alam@brightoncollege.net>
                 if(lastidx>=0) { //if there is a space in line
                     if(line.length<94) lastidx=line.length; //if it can contain whole line
                 } else lastidx=line.length;
-                if(paras[i][94]==' ') lastindex=94; //if extracted right before a space
-                paras[i] = line.substring(lastindex+1)+paras[i].substring(94); //remove extracted string (up to last index) from paras
-                line=line.substring(0, lastindex);
+                if(paras[i][94]==' ') lastidx=94; //if extracted right before a space
+                paras[i] = line.substring(lastidx+1)+paras[i].substring(94); //remove extracted string (up to lastidx) from paras
+                line=line.substring(0, lastidx);
                 lines.push(line);
             } while(paras[i]!="");
         }
