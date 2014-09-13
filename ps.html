@@ -50,13 +50,13 @@ Contact: <00alam@brightoncollege.net>
         var text=$("txt1").value;
         var parasWithExtraSpace=[];
         var parasLines=[]
-        if(text=="") {
-            printStats(0, 0, parasWithExtraSpace);
-            return;
-        }
         var paras=text.split('\n');
         var lines=[];
         var line=""
+        if(text=="") {
+            printStats(lines, 0, 0, parasWithExtraSpace, parasLines);
+            return;
+        }
         for(var i=0; i<paras.length; i++) {
             if(paras[i][paras[i].length-1]==' ') parasWithExtraSpace.push(i+1);
             do {
