@@ -1,0 +1,110 @@
+<html>
+<!--
+UCAS Personal Statement Word Counter
+Copyright (c) 2014 Adrian Iain Lam
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+A copy of the GNU General Public License can be found at
+<http://www.gnu.org/licenses/gpl.html>.
+
+Contact: <00alam@brightoncollege.net>
+-->
+<head>
+    <title>UCAS Personal Statement Word Counter</title>
+    <script>
+    function printStats(numLines, numChars, parasWithExtraSpace) {
+        var statLines=document.getElementById("statLines");
+        statLines.innerHTML="Lines: "+numLines+"/47";
+        if(numLines>47) statLines.style.color="red";
+        else statLines.style.color="initial";
+
+        var statChars=document.getElementById("statChars");
+        statChars.innerHTML="Characters: "+numChars+"/4000";
+        if(numChars>4000) statChars.style.color="red";
+        else statChars.style.color="initial";
+
+        var statWarn=document.getElementById("statWarn");
+        if(parasWithExtraSpace.length>0) {
+            statWarn.innerHTML="Warning: Extra space(s) found at end of paragraph(s) "+parasWithExtraSpace.join(", ");
+            statWarn.style.visibility="visible";
+            statWarn.style.color="red";
+        } else {
+            statWarn.innerHTML="Warning: Extra space(s) found at end of paragraph(s) ";
+            statWarn.style.visibility="hidden";
+        }
+    }
+
+    function analyse() {
+        var text=document.getElementById("txt1").value;
+        var parasWithExtraSpace=[];
+        if(text=="") {
+            printStats(0, 0, parasWithExtraSpace);
+            return;
+        }
+        var paras=text.split('\n');
+        var lines=[];
+        var line=""
+        for(var i=0; i<paras.length; i++) {
+            if(paras[i][paras[i].length-1]==' ') parasWithExtraSpace.push(i+1);
+            do {
+                if(paras[i][0]==' ') paras[i]=paras[i].substring(1); //remove preceding space
+                line=paras[i].substring(0, paras[i].length>94?94:paras[i].length); //extract line of 94 chars or fewer
+                var lastidx=line.lastIndexOf(' ');
+                if(lastidx>=0) { //if there is a space in line
+                    if(line.length<94) lastidx=line.length; //if it can contain whole line
+                } else lastidx=line.length;
+                if(paras[i][94]==' ') lastindex=94; //if extracted right before a space
+                paras[i] = line.substring(lastindex+1)+paras[i].substring(94); //remove extracted string (up to last index) from paras
+                line=line.substring(0, lastindex);
+                lines.push(line);
+            } while(paras[i]!="");
+        }
+        printStats(lines.length, text.length+paras.length-1, parasWithExtraSpace);
+    }
+
+    function autocheck() {
+        var chked=document.getElementById("chk1").checked;
+        var txtbox=document.getElementById("txt1");
+        if(chked) {
+            txtbox.addEventListener("input", analyse);
+            document.getElementById("btn1").style.visibility='hidden';
+            analyse();
+        } else {
+            txtbox.removeEventListener("input", analyse);
+            document.getElementById("btn1").style.visibility='visible';
+        }
+    }
+    </script>
+</head>
+
+<body onload="autocheck()">
+    <h1>UCAS Personal Statement Word Counter</h1>
+    <div id="txtContainer" style="float: left;">
+        Paste your personal statement here!<br />
+        <textarea rows="47" cols="94" id="txt1" style="font-family: monospace; resize: none;"></textarea>
+    </div>
+    <div id="statContainer" style="overflow: hidden; padding-left: 10pt;">
+        <input type="checkbox" onclick="autocheck()" checked id="chk1">Automatic analysis</input>
+        <button id="btn1" style="visibility: hidden;" onclick="analyse()">Analyse</button>
+        <div id="stats" style="padding-top: 10pt;">
+            <div id="statLines">Lines: 0/47</div>
+            <div id="statChars">Characters: 0/4000</div>
+            <div id="statWarn" style="visibility: hidden; color=red;">Warning: Extra space(s) found at end of paragraph(s)</div>
+        </div>
+        <p>Found a bug? Please report to &lt;00alam@brightoncollege.net&gt;.</p>
+        <p style="font-size: 8pt;">Copyright (c) 2014 Adrian Iain Lam<br />This program is free software, and you are welcome to redistribute it under the terms of the GNU GPL. This program comes with ABSOLUTELY NO WARRANTY. View the source for details.</p>
+        <p style="font-size: 8pt;">This site is not affiliated with, endorsed by, approved by, or related to UCAS.</p>
+        <p style="font-size: 8pt;">Unlike <a href="http://maccery.com/ps/" target="_blank">the counter by Maccery</a>, no personal statements are sent to the hosting server. All codes are executed on the client-side.</p>
+    </div>
+</body>
+</html>
+
