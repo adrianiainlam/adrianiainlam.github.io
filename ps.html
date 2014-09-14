@@ -105,11 +105,15 @@ Contact: <00alam@brightoncollege.net>
         #resultsContainer {
             font-family: monospace;
             float: right;
-            width: 100ch;
+            min-width: 100ch;
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-left-color: black;
+            white-space: nowrap;
         }
         #statContainer {
             overflow: auto;
-            max-width: 400pt;
+            padding-right: 8pt;
         }
         .note {
             font-size: 8pt;
