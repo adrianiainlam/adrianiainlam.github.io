@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Poker</title>
+    <meta charset="utf-8" />
+    
+    
+    <script>
+    var $ = document.getElementById.bind(document);
+    var cards=[];
+    var discards=[];
+    var money=100;
+    var bet=0;
+    
+    function randCard() {
+        return Math.floor(Math.random()*52);
+    }
+    
+    function num2card(num) {
+        var suit;
+        var value;
+        
+        switch(Math.floor(num/13)) {
+            case 0: suit="♠"; break;
+            case 1: suit="♥"; break;
+            case 2: suit="♣"; break;
+            case 3: suit="♦"; break;
+            default: alert("ERROR: suit undefined"); return "ERROR";
+        }
+        var faceval=num%13+1;
+        switch(faceval) {
+            case 1: value="A"; break;
+            case 11: value="J"; break;
+            case 12: value="Q"; break;
+            case 13: value="K"; break;
+            default: {
+                if(2<=faceval && faceval<=10) {
+                    value=faceval;
+                } else {
+                    alert("ERROR: value undefined");
+                    return "ERROR";
+                }
+            }
+        }
+        return "<span class=\""+suit+"\">"+suit+"<br />"+value+"</span>";
+    }
+    
+    function hide(obj) {
+        $(obj).style.visibility="hidden";
+    }
+    function show(obj) {
+        $(obj).style.visibility="visible";
+    }
+    
+    function init() {
+        cards=[];
+        discards=[];
+        $("result").innerHTML="";
+        for(var i=0; i<5; i++) {
+            $("card"+i).innerHTML="";
+            $("hold"+i).checked=false;
+        }
+        bet=0;
+        $("bet").innerHTML=0;
+        hide("btnNew");
+        show("btnDeal");
+        show("btnAdd");
+        show("btnMinus");
+        show("btnMax");
+        hide("btnDraw");
+        hide("btnHoldAll");
+        if($("alwaysMax").checked) {
+            maxBet();
+            deal();
+        }
+    }
+    
+    function deal() {
+        if(bet==0) return;
+        hide("btnDeal");
+        hide("btnAdd");
+        hide("btnMinus");
+        hide("btnMax");
+        show("btnDraw");
+        show("btnHoldAll");
+        discards=[];
+        $("result").innerHTML="";
+        for(var i=0; i<5; i++) {
+            do {
+                var card=randCard();
+            } while(cards.indexOf(card)>=0);
+            cards.push(card);
+            $("card"+i).innerHTML=num2card(card);
+        }
+    }
+    
+    function addBet() {
+        if(money<=0 || bet>=5) return;
+        bet++;
+        money--;
+        $("money").innerHTML=money;
+        $("bet").innerHTML=bet;
+    }
+    
+    function minusBet() {
+        if(bet<=0) return;
+        bet--;
+        money++;
+        $("money").innerHTML=money;
+        $("bet").innerHTML=bet;
+    }
+    
+    function maxBet() {
+        if(bet>0) {
+            money+=bet;
+            bet=0;
+        }
+        if(money<5) {
+            bet=money;
+            money=0;
+        } else {
+            bet+=5;
+            money-=5;
+        }
+        $("money").innerHTML=money;
+        $("bet").innerHTML=bet;
+    }
+    
+    function draw() {
+        for(var i=0; i<5; i++) {
+            if(! $("hold"+i).checked) {
+                // draw new card
+                do {
+                    var card=randCard();
+                } while(cards.indexOf(card)>=0 || discards.indexOf(card)>=0);
+                cards[i]=card;
+                $("card"+i).innerHTML=num2card(card);
+            }
+        }
+        calcWinnings();
+        show("btnNew");
+        hide("btnDraw");
+        hide("btnHoldAll");
+    }
+
+    function calcWinnings() {
+        var winnings=0;
+        
+        var count=[0,0,0,0,0,0,0,0,0,0,0,0,0];
+        for(var i=0; i<cards.length; i++) {
+            count[ cards[i]%13 ]++;
+        }
+
+        var isFlush = (function() {
+            var valZero=Math.floor(cards[0]/13);
+            for(var i=1; i<cards.length; i++) {
+                if(Math.floor(cards[i]/13)!=valZero) return false;
+            }
+            return true;
+        })();
+        
+        var isStraight = (function() {
+            for(var i=0; i<count.length; i++) {
+                if(count[i]>1) return false;
+                else if(count[i]==1) {
+                    if(count[i+1]==1 && count[i+2]==1 && count[i+3]==1 && count[(i+4)%13]==1) return true;
+                }
+            }
+            return false;
+        })();
+        
+        if(isFlush && isStraight) {
+            if(count[0]==1&&count[12]==1&&count[11]==1&&count[10]==1&&count[9]==1) {
+                if(bet<5) winnings=250*bet;
+                else if(bet==5) winnings=4000;
+                $("result").innerHTML="Royal flush, paid $"+winnings;
+            } else {
+                winnings=50*bet;
+                $("result").innerHTML="Straight flush, paid $"+winnings;
+            }
+        } else if(Math.max.apply(Math, count)==4) {
+            winnings=25*bet;
+            $("result").innerHTML="Four of a kind, paid $"+winnings;
+        } else if(Math.max.apply(Math, count)==3&&count.indexOf(2)>=0) {
+            winnings=9*bet;
+            $("result").innerHTML="Full house, paid $"+winnings;
+        } else if(isFlush) {
+            winnings=6*bet;
+            $("result").innerHTML="Flush, paid $"+winnings;
+        } else if(isStraight) {
+            winnings=4*bet;
+            $("result").innerHTML="Straight, paid $"+winnings;
+        } else if(Math.max.apply(Math, count)==3) {
+            winnings=3*bet;
+            $("result").innerHTML="Three of a kind, paid $"+winnings;
+        } else if(count.indexOf(2)>=0 && count.indexOf(2)!=count.lastIndexOf(2)) {
+            winnings=2*bet;
+            $("result").innerHTML="Two pair, paid $"+winnings;
+        } else if([count[0],count[10],count[11],count[12]].indexOf(2)>=0) {
+            winnings=1*bet;
+            $("result").innerHTML="Jacks or better, paid $"+winnings;
+        } else {
+            winnings=0;
+            $("result").innerHTML="Paid $0";
+        }
+        money+=winnings;
+        $("money").innerHTML=money;
+    }
+    
+    function holdAll() {
+        for(var i=0; i<5; i++) $("hold"+i).checked=true;
+    }
+    
+    function clickCard(card) {
+        var cardNo = card.id[4];
+        var chkbx = $("hold"+cardNo);
+        if(chkbx.checked) chkbx.checked=false;
+        else chkbx.checked=true;
+    }
+    
+    </script>
+    
+    <style>
+    .card {
+        border: 1px solid;
+        height: 100px;
+        width: 75px;
+        font-size: 30px;
+    }
+    .♠, .♣ {
+        color: black;
+    }
+    .♥, .♦ {
+        color: red;
+    }
+    </style>
+    
+</head>
+
+<body onload="init();">
+
+    <h1>Video Poker</h1>
+
+    <table>
+        <tr>
+            <th></th>
+            <th class="card" id="card0" onclick="clickCard(this);"></th>
+            <th class="card" id="card1" onclick="clickCard(this);"></th>
+            <th class="card" id="card2" onclick="clickCard(this);"></th>
+            <th class="card" id="card3" onclick="clickCard(this);"></th>
+            <th class="card" id="card4" onclick="clickCard(this);"></th>
+            <th id="result"></th>
+        </tr>
+        <tr>
+            <th>Hold</th>
+            <th><input type="checkbox" id="hold0" /></th>
+            <th><input type="checkbox" id="hold1" /></th>
+            <th><input type="checkbox" id="hold2" /></th>
+            <th><input type="checkbox" id="hold3" /></th>
+            <th><input type="checkbox" id="hold4" /></th>
+            <th><button id="btnDraw" onclick="draw();">Draw</button><button id="btnHoldAll" onclick="holdAll();">Hold all</button></th>
+        </tr>
+    </table>
+    <p>Your money: $<span id="money">100</span><br />
+    Bet: $<span id="bet">0</span>
+    <button id="btnAdd" onclick="addBet();">+</button>
+    <button id="btnMinus" onclick="minusBet();">-</button>
+    <button id="btnMax" onclick="maxBet();">MAX</button>
+    <button id="btnDeal" onclick="deal();">Deal</button>
+    <button id="btnNew" onclick="init();">New</button>
+    <br /><input type="checkbox" id="alwaysMax" />Always bet MAX</p>
+</body>
+
+</html>

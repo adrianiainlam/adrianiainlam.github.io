@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html><html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Login - Brighton College</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Templates/lib/optimised/10a55e74026f026936b77a10f3f75039.css">
+			        <!--[if lte IE 7]>
+			        	<link rel="stylesheet" href="/Templates/lib/core/login/ie7.css" type="text/css" media="screen,projection" charset="utf-8" />
+			        <![endif]-->
+			        <!--[if IE 8]>
+		        	<link href="/Templates/lib/core/login/ie.css" type="text/css" media="screen,projection" charset="utf-8" rel="stylesheet" />
+		        	<![endif]-->
+			        <script src="Templates/lib/optimised/884d772f581ed2dc16a60931dd89fa45.js"></script>
+                    
+    <script>
+    function notify() {
+        alert("Congrats! You (almost) became a victim of phishing attack!");
+    }
+    </script>
+    </head>
+  <body class="ff-login ff-login-no-alternative">
+    <div class="ff-login-personalised-background"><img class="ff-login-personalised-logo" src="Templates/Nautilus_Brighton_College/custom/logo.png"></div>
+    <div class="ff-login-box">
+      <div class="ff-login-sitename">Brighton College</div>
+      <div class="ff-login-mainsection">
+        <p class="ff-login-instruction">Please enter your username and password to log in</p>
+        <!--<form action="https://vle.brightoncollege.net/login/login.aspx?prelogin=https%3a%2f%2fvle.brightoncollege.net%2f&amp;kr=ActiveDirectoryKeyRing" method="post"> -->
+          <p class="ff-login-type-title">Network login (AD)</p>
+          <div class="ff-login-formfiled"><label for="username">Username</label><span class="ff-login-icons ff-login-icons-user"></span>
+          <input type="text" class="ff-login-user ff-login-input" placeholder="Username" id="username" name="username" onkeydown="if(event.keyCode==13)notify();"></div>
+          <div class="ff-login-formfiled ff-login-password"><label for="password">Password:</label><span class="ff-login-icons ff-login-icons-password"></span>
+          <input class="ff-login-password ff-login-input" type="password" name="password" id="password" placeholder="Password" autocomplete="off" onkeydown="if(event.keyCode==13)notify();"></div>
+          <button type="submit" class="ff-login-submit" onclick="notify();">Log in</button><!--</form>-->
+      </div>
+      <div class="ff-login-footer"><img src="Templates/lib/core/login/images/firefly-logo.png"></div>
+    </div>
+  </body>
+</html>
