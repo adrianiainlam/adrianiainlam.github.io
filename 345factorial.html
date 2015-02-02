@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<p><span class="math">\[30^x = 2^x\,3^x\,5^x\]</span></p>
+<p>Let <span class="math">\(F(n)\)</span> be the number of integers from 1 to 345 that has <span class="math">\(n\)</span> as a factor.</p>
+<p>Since <span class="math">\( 5 &gt; 3 &gt; 2\)</span>, it follows that <span class="math">\(F(5) &lt; F(3) &lt; F(2)\)</span> (in other words, 5 occurs less frequently than 2 or 3). Hence, instead of 30 we only need to consider its factor 5.</p>
+<p><span class="math">\[\dfrac{345}{5} = 69 \qquad \therefore F(5) = 69\]</span> <span class="math">\[\dfrac{345}{5^2} = 13.8 \qquad \therefore F(5^2) = 13\]</span></p>
+<p>Similarly, <span class="math">\(F(5^3) = 2\)</span>, <span class="math">\(F(5^k) = 0\)</span> for <span class="math">\(k &gt; 3\)</span>. <span class="math">\[\therefore x = 69 + 13 + 2 = 84\]</span></p>
+</body>
+</html>
