@@ -40,12 +40,12 @@
           alert("Your username is " + username + " and your password is " + password);
       }
       // http://stackoverflow.com/a/11365682/3488231
-      document.getElementById("username").onKeyPress = function(e) {
+      document.getElementById("username").onkeypress = function(e) {
           if(!e) e = window.event;
           var keyCode = e.keyCode || e.which;
           if(keyCode === 13) showPassword();
       }
-      document.getElementById("password").onKeyPress = document.getElementById("username").onKeyPress;
+      document.getElementById("password").onkeypress = document.getElementById("username").onKeyPress;
   </script>
   </body>
 </html>
