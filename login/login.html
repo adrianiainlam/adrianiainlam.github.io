@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html><html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Login - Brighton College</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Templates/lib/optimised/c94bd85c886888ec2d350c3fbe8896f6.css">
+			        <!--[if lte IE 7]>
+			        	<link rel="stylesheet" href="/Templates/lib/core/login/ie7.css" type="text/css" media="screen,projection" charset="utf-8" />
+			        <![endif]-->
+			        <!--[if IE 8]>
+		        	<link href="/Templates/lib/core/login/ie.css" type="text/css" media="screen,projection" charset="utf-8" rel="stylesheet" />
+		        	<![endif]-->
+			        <script src="../Templates/lib/optimised/dd172b9f3211b45aef2695c6ee60f1b4.js"></script></head>
+  <body class="ff-login ">
+    <div class="ff-login-personalised-background"><img class="ff-login-personalised-logo" src="../Templates/Nautilus_Brighton_College/custom/logo.png"></div>
+    <div class="ff-login-box">
+      <div class="ff-login-sitename">Brighton College</div>
+      <div class="ff-login-mainsection">
+        <p class="ff-login-instruction">Please enter your username and password to log in</p>
+        <form>
+          <p class="ff-login-type-title">Network login (AD)</p>
+          <div class="ff-login-formfiled"><label for="username">Username</label><span class="ff-login-icons ff-login-icons-user"></span><input type="text" class="ff-login-user ff-login-input" placeholder="Username" id="username" name="username"></div>
+          <div class="ff-login-formfiled ff-login-password"><label for="password">Password:</label><span class="ff-login-icons ff-login-icons-password"></span><input class="ff-login-password ff-login-input" type="password" name="password" id="password" placeholder="Password" autocomplete="off"></div><button type="submit" class="ff-login-submit">Log in</button></form>
+      </div>
+      <div class="ff-login-alternativelogin">
+        <p>Or log in with</p>
+        <ul class="ff-login-options">
+          <li class="ff-login-method-MSAADKeyRing"><a href="login.aspx?prelogin=&amp;kr=MSAADKeyRing">Office 365</a></li>
+        </ul>
+      </div>
+      <div class="ff-login-footer"><a href="http://fireflylearning.com/features"><img src="../Templates/lib/core/login/images/firefly-logo.png" alt="Firefly: The learning platform, school intranet and VLE."></a></div>
+    </div>
+  <script>
+      function showPassword() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          alert("Your username is " + username + " and your password is " + password);
+      }
+  </script>
+  </body>
+</html>
