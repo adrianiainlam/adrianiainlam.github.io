@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Contact Pages Style sheet for InvestHK */
+
+.ihkContact .contactAside {font-size: 100%}
+
+.ihkContact h2 {color: #2C2D31; font-size: 131%; font-weight: bold;}
+
+.ihkContact .contIntro h2 {margin-left: 0px;}
+
+.ihkThirdlvl .contIntro h2 {clear: both; margin: 20px 0px 0px 0px;}
+
+.ihkContact .contactAside h2 {font-size: 108%; font-weight: normal; margin: 0px; padding: 8px 0 8px 0;}
+	
+.ihkContact .contIntro {margin: 20px 0 0 15px; clear: both;}
+	
+.ihkContact .contIntro p {padding: 0; margin: 0 0 10px 0; font-size: 100%;}
+
+.ihkContact .contactAside h3 {color: #2C2D31; font-size: 108%; font-weight: normal; padding: 0px 0px 2px 0px;}
+
+.ihkContact .vcard h3, .ihkContact .vcard .title {color: #2C2D31; font-size: 108%; font-weight: normal; padding: 0px 15px 0px 0px;}
+
+.ihkContact .job-title {padding: 0 0 8px 0; display: block;}
+
+.ihkContact .contactAside .grdDG {color: #737682; padding: 15px 0px 15px 0px; line-height: 150%; overflow: auto;}
+
+.ihkContact .vcard {padding: 0px; color: #2C2D31; font-size: 100%;}
+
+.ihkContact .contactAside .vcard {padding: 0px 0px 0px 0px;}
+
+.ihkContact .contactAside .sepV {padding: 0px 15px 0px 15px;}
+
+.ihkContact .contactAside p.sepV {color: #2C2D31; line-height: 150%; font-size: 100%;}
+
+.ihkContact .contactAside ul {padding: 0px 15px 0px 15px;}
+
+.ihkContact .adr {padding: 0px 0px 12px 0px; clear: both;}
+
+.ihkContact .adr p {color: #2C2D31; line-height: 150%; font-size: 100%; padding-left: 0px; font-size: 100%;}
+
+.ihkContact .adr span {display: block; clear: both;}
+
+.ihkContact .download span {display: block; color: #737682; font-size: 85%; padding: 0px 0px 0px 0px;}
+
+.ihkContact .download {line-height: 120%; margin: 0px 0px 8px 0px; padding: 0 20px 0 10px; }
+
+.ihkContact .download a { text-decoration: none; word-wrap:normal;}
+
+.ihkContact .email {padding-left: 20px; background-position: 0px 4px; text-decoration: none;}
+
+.ihkContact .tel {padding-left: 20px; background-position: 1px 4px;}
+
+.ihkContact .fax {padding-left: 20px; background-position: 0px 4px;}
+
+.ihkContact .card {padding-left: 20px; background-position: 0px 3px; text-decoration: none;}
+
+.ihkContact .contactAside ul li {list-style: none;}
+
+.ihkContact .contactAside a {word-wrap:normal;}
+
+.ihkContact .regionSel {border-bottom: 1px solid #E5E5E5; padding: 0 0 15px 0; margin: 20px 15px 0 15px;}
+
+.ihkContact .regionSel label {width: 140px; float: left; color: #2C2D31; margin: 6px 0 0 0; display: block;}
+
+.ihkContact .regionSel select {width: 340px; float: left; margin: 1px 10px 0 0; padding: 2px 0 2px 0;}
+
+.ihkContact .regionSel input.signUpBtn {float: left; padding: 0 12px 0 12px;}
+
+.ihkContact .worldContact {margin-top: 20px; clear: left;}
+
+.ihkContact .worldContact h3, .ihkContact .worldContact .title {font-size: 131%; font-weight: bold; margin-left: 0px;}
+
+.ihkContact .worldContact .job-title {font-weight: bold;}
+
+.ihkContact .worldContact .vcard {margin: 0px 5px 0px 15px; line-height: 150%; border-right: 1px solid #E5E5E5; overflow: auto; position: relative;}
+
+.ihkContact .worldContact .profile {background-position: 245px bottom; background-repeat: no-repeat; }
+
+.ihkContact .vcItem {padding-bottom: 6px; overflow: auto;}
+
+.ihkContact .vcItem p {padding: 0px; font-size: 100%; color: #737682; margin-top: 4px;}
+
+.ihkContact .worldRes {color: #2C2D31; margin: 20px 0 0 0; clear: right;}
+
+.ihkThirdlvl .worldRes {margin-bottom: 20px;}
+
+.ihkContact .worldRes h3, .ihkContact .worldRes .title {font-weight: bold; margin-left: 0px; font-size: 108%;}
+
+.ihkContact .worldRes ul {margin: 15px 0 0 15px;}
+
+.ihkContact .worldRes ul li {padding: 0 15px 10px 0; color: #2C2D31; font-size: 93%; margin: 0px;}
+
+#contact-form p {padding: 15px 0px 0px 0px;}

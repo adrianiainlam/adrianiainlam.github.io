@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* All type of lightbox overides */
+
+
+/* Shadow box */
+
+#sb-container #sb-wrapper {
+	box-shadow: 0 4px 30px #000000;
+}
+#sb-container #sb-wrapper-inner {
+	position:relative;
+	border-width: 0px;
+	border-left:20px solid #FFFFFF;
+	border-right:20px solid #FFFFFF;
+	border-color: #ffffff !important;
+	background:#fff;
+	overflow:hidden;
+	height:100px;
+	border-color: inherit;
+}
+#sb-container #sb-title-inner, #sb-container #sb-info-inner, #sb-container #sb-loading-inner, div.sb-message {
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	color:#2C2D31;
+}
+#sb-container #sb-wrapper {
+	padding: 0;
+	background:#fff;
+	border-color: #ffffff !important;
+}
+#sb-container #sb-nav-close {
+	background-image: url(../images/icons/closeR.png);
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+}
+#sb-container #sb-nav-close:hover {
+	background-position: -960px 3px;
+}
+#sb-container #sb-loading {
+	background:#fff;
+}
+#sb-container #sb-body, #sb-container #sb-loading {
+	background:#fff;
+}
+#sb-container #sb-loading-inner {
+	background: url(../images/common/loadingAnimation.gif) top center no-repeat;
+}
+#sb-container #sb-loading-inner span {
+	display: none;
+}
+#sb-container #sb-body-inner {
+	border: none;
+}
+#sb-container #sb-nav a {
+	height: 20px;
+	margin-right: 20px;
+}
+#sb-container #sb-info, #sb-container #sb-info-inner {
+	height: 26px;
+}
+/* thick box */
+
+#TB_window {
+	font: 108% Helvetica, Arial, sans-serif;
+	color: #2C2D31;
+	border: none;
+}
+#TB_secondLine {
+	font: 93% Helvetica, Arial, sans-serif;
+	color:#737682;
+}
+#TB_window a:link {
+	color: #E30022;
+}
+#TB_window a:visited {
+	color: #E30022;
+}
+#TB_window a:hover {
+	color: #A70019;
+}
+#TB_window a:active {
+	color: #A70019;
+}
+#TB_window a:focus {
+	color: #A70019;
+}
+.TB_overlayBG {
+	background-color:#000;
+	opacity: 0.5;
+}
+#TB_window {
+	color:#2C2D31;
+}
+#TB_window img#TB_Image {
+	border: 1px solid #E5E5E5;
+}
+#TB_title {
+	background-color:#ffffff;
+	border-bottom: 1px solid #E5E5E5;
+}
+#TB_load {
+	background-color: transparent;
+	border: none;
+}
+#TB_caption {
+	padding: 15px 30px 0 15px;
+}
+#TB_closeWindow {
+	padding: 11px 15px 0 0;
+}
+#TB_closeWindowButton {
+	background-image: url(../images/icons/closeR.png);
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+	display: block;
+	width: 16px;
+	height: 19px;
+}
+#TB_closeWindowButton:hover {
+	background-position: -960px 3px;
+}
+#TB_closeWindowButton img {
+	display: none;
+}
+#TB_next a {
+	text-decoration: none;
+}
+#TB_prev a {
+	text-decoration: none;
+}
+/* Simple Modal Override */
+
+#simplemodal-login-overlay {
+	background-color: #000000;
+}
+#simplemodal-login-container form {
+	border: 0px;
+	box-shadow:0 4px 30px #000000;
+	border-radius: 0px;
+}
+.simplemodal-login-credit {
+	display: none;
+}
+#simplemodal-login-container .title {
+	color: #2C2D31;
+	font-size: 200%;
+	margin-bottom: 20px;
+}
+#simplemodal-login-container form label {
+	color: #2C2D31;
+}
+#simplemodal-login-container .user_pass, #simplemodal-login-container .user_login, #simplemodal-login-container .user_email, .simplemodal-wrap p input[type="password"], .simplemodal-wrap p select, .simplemodal-wrap p textarea, #simplemodal-login-container .input {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: 2px 2px 2px #D9D9D9 inset;
+	font-size: 108%;
+	padding: 5px;
+	width: 95%;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+}
+#simplemodal-login-container .nav a {
+	color: #E30022;
+}
+#simplemodal-login-container .nav a:hover {
+	color: #A70019;
+	text-decoration: none;
+}
+#simplemodal-login-container form .submit input {
+	color: #ffffff;
+	padding: 0px;
+	font-size: 100%;
+	background: #E30022; /* Old browsers */
+	background-color: #E30022;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkMmM0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U0MmQ0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2RmMGMxOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNDBjMTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ed2c43 0%, #e42d43 50%, #df0c18 51%, #d40c18 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed2c43), color-stop(50%, #e42d43), color-stop(51%, #df0c18), color-stop(100%, #d40c18)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ed2c43 0%, #e42d43 50%, #df0c18 51%, #d40c18 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ed2c43 0%, #e42d43 50%, #df0c18 51%, #d40c18 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ed2c43 0%, #e42d43 50%, #df0c18 51%, #d40c18 100%); /* IE10+ */
+	background: linear-gradient(top, #ed2c43 0%, #e42d43 50%, #df0c18 51%, #d40c18 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed2c43', endColorstr='#d40c18', GradientType=0 ); /* IE6-8 */
+	border: none;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-shadow: 1px 1px 1px #9B0118;
+	height: 2.0em;
+	color: #fff;
+	margin: 0px;
+	padding: 0px 12px 0px 12px;
+}
+#simplemodal-login-container form .submit input:hover, #simplemodal-login-container form .submit input:focus {
+	background: #a41f2f;
+	background-color: #a41f2f; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E0MWYyZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2M0MjczYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2MwMDkxNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMzBiMTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #a41f2f 0%, #c4273a 50%, #c00915 51%, #d30b18 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a41f2f), color-stop(50%, #c4273a), color-stop(51%, #c00915), color-stop(100%, #d30b18)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #a41f2f 0%, #c4273a 50%, #c00915 51%, #d30b18 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #a41f2f 0%, #c4273a 50%, #c00915 51%, #d30b18 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #a41f2f 0%, #c4273a 50%, #c00915 51%, #d30b18 100%); /* IE10+ */
+	background: linear-gradient(top, #a41f2f 0%, #c4273a 50%, #c00915 51%, #d30b18 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a41f2f', endColorstr='#d30b18', GradientType=0 ); /* IE6-8 */
+	color: #fff;
+}
+#simplemodal-login-container form .submit input.simplemodal-close {
+	position: absolute;
+	background: none;
+	filter: none;
+	color: #E30022;
+	top: 8px;
+	right: 8px;
+	text-shadow: none;
+	text-decoration: underline;
+	padding: 0px;
+}
+#simplemodal-login-container form .submit input.simplemodal-close:hover, #simplemodal-login-container form .submit input.simplemodal-close:focus {
+	background: #fff !important;
+	background-color: #fff;
+	filter: none;
+	color: #A70019;
+	text-decoration: none;
+}
+#simplemodal-login-container .rememberme {
+	margin: -3px 0 0 0;
+}
+#simplemodal-login-container .reg_passmail {
+	display: none;
+}
+#simplemodal-login-container .message, #simplemodal-login-container #login_error {
+	border-radius: 0px;
+}

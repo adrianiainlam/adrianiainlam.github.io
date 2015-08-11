@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Publications Style Sheet Notes for InvestHK */ 
+ 
+.ihkPubs .tabNav {width: 100%;}
+ 
+.ihkPubs .tabNav li {width: 14%; padding: 6px 0px 6px 0px; margin: 0px; text-align: center;}
+
+.ihkPubs .tabNav li span {padding: 0px 15px;}
+
+.listBrochures {margin: 20px 20px 0px 20px; padding: 0px 0px 20px 0px;}
+
+.listBrochures ul {border-bottom: 1px dotted #E5E5E5; margin: 0px 0px 20px 0px; padding: 0px 0px 20px 0px;}
+
+.listBrochures li {float: left; display: block; width: 265px; margin: 0px; font-size: 100%;}
+
+.listBrochures li img {float: left; border: 1px solid #E5E5E5; box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.15);}
+
+.listBrochures li .desc {float: left; width: 185px; padding: 0px 0px 10px 0px;}
+
+.listBrochures li .desc span {display: block; margin: 4px 0px 4px 20px; color: #737682; font-size: 85%;}
+
+.listBrochures li .desc a {margin: 4px 0px 0px 10px; padding: 0px 0px 0px 10px; display: block; text-decoration: none; background-position: 0px 5px;}
+
+.listBrochures li .desc a:hover {background-position: -960px 5px;}
+
+.listBrochures li .desc p {margin: 0px 0px 0px 20px; padding: 0px; font-size: 93%; line-height: 130%;}
+
+.listLetter h3 {color: #2C2D31; text-align: left; margin: 0px 0px 0px 15px;}
+
+.subIntro {margin: 20px 0px 15px 20px;}
+
+.subIntro h2 {margin: 0px 0px 10px 0px;}
+
+.subIntro p {font-size: 100%; padding: 0px;}
+
+.subIntro p.quiet {font-size: 93%; color: #737682;}
+
+.letterTemplate {padding: 15px; margin: 20px 15px 0px 0px; display: block; text-decoration: none; overflow: auto; cursor: pointer;}
+
+.letterTemplate img {float: left; padding: 15px;}
+
+.letterTemplate span {display: block;}
+
+.letterTemplate .desc {float: left; width: 310px; display: block; padding: 15px 0px 0px 0px;}
+
+.letterTemplate .title {padding: 5px 0px 0px 0px; color: #ABABAD; font-size: 116%;}
+
+.letterTemplate .date {padding: 5px 0px 0px 10px; color: #ABABAD; font-size: 116%;}
+
+.letterTemplate .fLink { color: #ffffff; font-size: 123.1%; text-decoration: none; padding: 0px 0px 0px 10px; margin-top: 3px; background-position: 0px 5px;}
+
+.letterTemplate:hover .date,.letterTemplate:hover .title {color: #F8BFC8; text-decoration: none;}
+
+.ihkPubs .List {margin: 0px 20px 20px 15px;}
+
+.ihkPubs .List li {padding-left: 10px; list-style: none; margin: 8px 0px 8px 0px; font-size: 100%;}
+
+.ihkPubs .List li a {text-decoration: none;}
+
+.ihkPubs .List li:hover {background-position: -960px 3px;}
+
+.ihkPubs .ui-tabs-panel dl {margin: 0px 20px 20px 20px;}

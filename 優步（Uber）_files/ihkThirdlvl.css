@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 3rd level templates for invest hong kong */
+ 
+.ihkThirdlvl h4 a:hover {color:#ccc; text-decoration:none;}
+
+.ihkThirdlvl h2 a:hover {color:#ccc; text-decoration:none;}
+
+.ihkThirdlvl .grid_6 {margin-top:6px;}
+
+.ihkThirdlvl .actNow {border-top:1px solid #E5E5E5; margin: 0 10px 0 10px;}
+
+.ihkThirdlvl .actNow p {font-size:93%; color:#737682;}
+
+.ihkThirdlvl .actNow h3, .ihkThirdlvl .actNow .content {font-size:123.1%; color:#2C2D31; border:none; font-weight: normal; padding-top:12px;}
+
+.ihkThirdlvl .actNow .supportingH3 {color:#737682; display: block; font-size: 86%;}
+
+.ihkThirdlvl .actHolder {margin: 20px 10px 20px 10px; background: #F0F3F5; /* Old browsers */
+
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjRmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWY0ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -moz-linear-gradient(left,  #F0F3F5 0%, #ffffff 50%, #F0F3F5 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#F0F3F5), color-stop(50%,#ffffff), color-stop(100%,#F0F3F5)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(left,  #F0F3F5 0%,#ffffff 50%,#F0F3F5 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(left,  #F0F3F5 0%,#ffffff 50%,#F0F3F5 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(left,  #F0F3F5 0%,#ffffff 50%,#F0F3F5 100%); /* IE10+ */
+
+background: linear-gradient(left,  #F0F3F5 0%,#ffffff 50%,#F0F3F5 100%); /* W3C */
+
+ }
+
+.ihkThirdlvl .leftBg {float: left; width: 49%; border-right: 1px dotted #E30022;}
+
+.ihkThirdlvl .leftBg p {font-size: 100%; line-height: 140%;}
+
+.ihkThirdlvl .leftBg h4 {font-size: 123.1%;
+	color:#333;
+	border:none;
+	padding:15px 15px 10px 10px;
+	margin: 0;
+	border-bottom: none; font-weight: normal;}
+	
+	.ihkThirdlvl .rightBg h4 {font-size: 123.1%;
+	color:#333;
+	border:none;
+	padding: 0px 15px 10px 15px;
+	margin: 0px;
+	border-bottom: none; font-weight: normal;}
+	
+	.ihkThirdlvl .leftBg h2, .ihkThirdlvl .leftBg .widget-title {font-size: 123.1%;
+	color:#333;
+	border:none;
+	padding:15px 15px 10px 10px;
+	margin: 0;
+	border-bottom: none; font-weight: normal;}
+	
+	.ihkThirdlvl .rightBg h2 {font-size: 123.1%;
+	color:#333;
+	border:none;
+	padding: 0px 15px 10px 15px;
+	margin: 0px;
+	border-bottom: none; font-weight: normal;}
+	
+.ihkThirdlvl .leftBg p {padding: 0px 15px 0px 10px;}
+
+.ihkThirdlvl .rightBg p {padding: 0px 15px 0px 15px; line-height: 120%; margin-bottom: 8px;}
+	
+.ihkThirdlvl .forumBtn {margin: 0px 0px 15px 10px;}
+
+.ihkThirdlvl .rightBg {float: left; width: 50%;}
+
+.ihkThirdlvl .contactBox {background: none; border: none; filter: none;}
+
+/*.ihkThirdlvl .contactInner {height: 11em;}*/
+
+.ihkThirdlvl .Comments {background-color:#F0F3F5; padding:10px;}
+
+.PKImg .PKtitle {font-weight:bold;}
+
+.meetTeam li {display: block; list-style: none; margin: 0px 0px 20px 0px; border-bottom: 1px solid #E5E5E5; padding: 0px 0px 20px 0px; font-size: 100%;}
+
+.meetTeam li.last {border-bottom: none; margin: 0px;}
+
+.meetTeam img {float: left; margin: 0px 15px 0px 0px;}
+
+.meetTeam .desc {float: left; width: 405px;}
+
+.ihkThirdlvl .meetTeam h2 {color: #2C2D31; font-size: 123.1%; margin: 10px 0px 0px 0px; padding: 0px; font-weight: normal;}
+
+.meetTeam .jTitle {font-size: 100%; display: block; color: #737682; margin: 0; padding: 0px;}
+
+.meetTeam p {margin: 8px 0px 0px 0px; padding: 0px;font-size: 100%;}
+
+.ihkThirdlvl .SuccessList {margin-left: 10px;}
+
+.ihkThirdlvl .SuccessList li {float:left; margin: 0px 10px 0px 0px; padding:0px 0px 0px 10px; list-style-type: none; font-size:100%; color:#737682; margin-bottom:10px; background-position: 0px 4px;}
+
+.ihkThirdlvl .SuccessList a {color:#E30022; text-decoration:none; }
+
+.ihkThirdlvl .SuccessList a:hover {text-decoration:underline; color: #A70019;}
+
+.ihkThirdlvl .SuccessList li.arrowRRHvr:hover  {background-position: -960px 4px;}
+
+.ihkThirdlvl .pullout {float:right;}
+
+.ihkThirdlvl .pullout a {display: block; margin:5px 10px 10px 15px;}
+
+.ihkThirdlvl .pullout p {margin: 15px; padding: 0px;}
+
+.ihkThirdlvl h2.FastFacts {padding:20px 0px 10px 10px; margin: 0px; border-top:1px dotted #E30022;}
+
+.ihkThirdlvl h3.FastFacts, .ihkThirdlvl p.FastFacts {padding:20px 0px 10px 0px; margin: 0px 10px 0px 10px; border-top:1px dotted #E30022; font-weight:bold; font-size:108%;}
+
+.ihkThirdlvl ul.FastFactsList { margin-bottom:20px;}
+
+.ihkThirdlvl ul.FastFactsList li {margin-left: 24px; margin-right:18px; margin-bottom:12px; font-size:100%;}
+
+.ihkThirdlvl .LinkedinSuccess {border-top:1px dotted #ccc; border-bottom:1px dotted #ccc; padding-bottom:10px; margin-top:15px;}
+
+.ihkThirdlvl .LinkedinSuccess p {color:#2C2D31; font-family:Arial, Helvetica, sans-serif; font-size:85%; font-weight:bold; padding-left:30px; background-image:url(../images/icons/Link-icon.png); background-repeat:no-repeat; display:block; margin-bottom:5px; margin-top:10px; height:22px;}
+
+.ihkThirdlvl .LinkedinSuccess a { font-family:Arial, Helvetica, sans-serif; font-size:77%; color:#E30020; text-decoration:none;}
+
+.ihkThirdlvl .LinkedinSuccess a:hover {color: #A70019;}
+
+.ihkThirdlvl .endLink {background-color: #F0F3F5; background-position: 10px 14px; padding: 10px; display: block; margin: 0px 10px 0px 10px;}
+
+.ihkThirdlvl .endLink:hover {background-position: -950px 14px;}
+
+.ihkThirdlvl .endLink a {padding-left: 10px; text-decoration: none;}
+
+.ihkThirdlvl p.diagramCaption {left: -3000px; overflow: hidden; position: relative;}
+
+.ihkThirdlvl .pageDiagrams img {margin-left: 10px;}
+
+.ihkThirdlvl .tabArea {margin: 0px 10px 0px 10px;}
+
+.ihkThirdlvl .tabNav {margin-top: 15px;}
+
+.ihkThirdlvl .tabNav li span {padding: 0 17px;}

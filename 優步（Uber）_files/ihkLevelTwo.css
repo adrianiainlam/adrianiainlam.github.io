@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Level 2 stylesheet for InvestHK For use by 2nd level: why, business sectors, how we can help and set up your business */
+
+/* how we can help */
+
+.ihkLevelTwo .stagePicker {
+	margin: 20px 0px 0px 0px;
+}
+.ihkLevelTwo .stagePicker li {
+	display: block;
+	float: left;
+	color: #2C2C31;
+	font-weight: bold;
+	font-size: 108%;
+	padding: 0px 10px 0px 0px;
+	margin: 0px 0px 0px 1px;
+}
+.ihkLevelTwo .stagePicker li a {
+	text-decoration: none;
+	display: block;
+	color: #E30022;
+	font-weight: normal;
+	padding: 0px 0px 0px 8px;
+	margin-left: 5px;
+	background-position: 0px 4px;
+}
+.ihkLevelTwo .stagePicker li a.arrowRRHvr:hover {
+	text-decoration: underline;
+	color: #a70019;
+	background-position: -960px 4px;
+}
+.ihkLevelTwo .howOptions {
+	width: 100%;
+}
+.ihkLevelTwo .howOptions li {
+	width: 100%;
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+.ihkLevelTwo .howOptions h2 {
+	font-size: 116%;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	width: 220px;
+	text-align: left;
+}
+.ihkLevelTwo .howOptions h2 span {
+	display: block;
+	padding: 12px 0pc 10px 12px;
+	color: #ffffff;
+}
+.ihkLevelTwo .howOptions .stageHold {
+	border-top: 1px solid #E30020;
+}
+.ihkLevelTwo .howOptions img {
+	float: left;
+	width: 220px;
+}
+.ihkLevelTwo .howOptions .stager {
+	padding: 16px 0px 12px 0px;
+	float: right;
+	width: 700px;
+}
+.ihkLevelTwo .howOptions .stager p {
+	font-size: 123.1%;
+	color: #2C2C31;
+}
+.ihkLevelTwo .howOptions .stager ul {
+	padding: 0px;
+	margin: 15px 0 10px 0;
+	overflow: hidden;
+	width: 100%;
+}
+.ihkLevelTwo .howOptions .stager li {
+	padding: 0px 0px 8px 12px;
+	margin: 0px 0px 0px 10px;
+	width: 290px;
+	list-style-type: none;
+	list-style-position: outside;
+	font-size: 100%;
+	color: #737682;
+	vertical-align: top;
+	position: relative;
+	float: left;
+}
+.ihkLevelTwo .howOptions .stager li ul {
+	margin: 6px 0px 10px 0px;
+	float: none;
+	width: auto;
+}
+.ihkLevelTwo .howOptions .stager li li {
+	color: #737682;
+	font-size: 93%;
+	list-style-type: none;
+	padding: 0px 0px 4px 12px;
+	margin: 0px 0px 0px 10px;
+}
+.ihkLevelTwo .howOptions .find {
+	background-color: #F0F3F5;
+	background-position: 10px 12px;
+	padding: 9px 9px 9px 30px;
+	color: #2C2C31;
+}
+.ihkLevelTwo .howOptions .find a {
+	text-decoration: underline;
+	color: #E30020;
+}
+.ihkLevelTwo .howOptions .find a:hover {
+	text-decoration: none;
+	color: #a70019;
+}
+.ihkLevelTwo .terms {
+	margin: 30px 0px 10px 0px;
+}
+.ihkLevelTwo .terms p {
+	font-size: 83%;
+	color: #737682;
+	padding: 0px 0px 10px 0px;
+}
+.ihkLevelTwo .terms ul li {
+	font-size: 83%;
+	color: #737682;
+	list-style-type: disc;
+	list-style-position: inside;
+	padding-bottom: 8px;
+}
+/* success stories */
+
+.ihkLevelTwo .successFeature {
+	position: relative;
+}
+.ihkLevelTwo .successFeature h2 {
+	font-size:153.9%;
+	color:#fff;
+	margin-top:25px;
+	padding:0px 0px 0px 10px;
+	margin-bottom:20px;
+	background-position: 0 6px;
+}
+.ihkLevelTwo .successFeature h2.arrowRWHvr:hover {
+	background-position: -960px 6px;
+}
+.ihkLevelTwo .successFeature h2 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.ihkLevelTwo .successFeature h2 a:hover {
+	color: #A5A5A7;
+	text-decoration: underline;
+}
+.ihkLevelTwo .SuccessQuoteText {
+	margin-left:10px;
+}
+.ihkLevelTwo .successFeature p {
+	font-size:114%;
+	color:#ABABAD;
+	width:300px;
+	margin-left: 10px;
+}
+.ihkLevelTwo .successFeature ul {
+	list-style: none;
+	padding-left: 10px;
+	margin: 0px;
+}
+.ihkLevelTwo .successFeature li {
+	padding-left: 12px;
+	font-size: 100%;
+}
+.ihkLevelTwo .successFeature li a {
+	color:#E30022;
+	text-decoration: none;
+}
+.ihkLevelTwo .successFeature li a:hover {
+	color:#A5A5A7;
+	text-decoration: underline;
+}
+.ihkLevelTwo .successFeature .SuccessName {
+	color:#fff;
+	margin: 15px 0px 0px 10px;
+}
+.ihkLevelTwo .successFeature .grid_6 {
+	margin-bottom:0px;
+}
+.ihkLevelTwo .successFeature .grid_6 {
+	width:430px;
+}
+.ihkLevelTwo .successImg {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.ihkLevelTwo .SuccessJob {
+	font-style:italic;
+	font-size:93%;
+	margin-left: 10px;
+	margin-bottom:15px;
+}
+.ihkLevelTwo .SuccessQuote {
+	margin-left: 10px;
+	background-repeat:no-repeat;
+}
+.ihkLevelTwo .SuccessQuoteText li a {
+	color:#fff;
+}
+.ihkLevelTwo .SuccessQuoteText li .Country {
+	font-style:italic;
+}
+.ihkLevelTwo .SuccessGradient {
+	padding: 15px 0px 0px 0px;
+}
+.ihkLevelTwo .SuccessGradient h2 {
+	font-size:138.5%;
+	margin-left:10px;
+	display: block;
+	float: left;
+	width: 200px;
+	color: #2C2D31;
+}
+.ihkLevelTwo .SuccessGradient h3 {
+	font-size:108%;
+	margin-left:10px;
+	display: block;
+	color: #737682;
+	clear: left;
+}
+.ihkLevelTwo .SuccessGradient ul {
+	float: right;
+	display: block;
+	margin: -2px 10px 0px 0px;
+	padding: 0px;
+}
+.ihkLevelTwo .SuccessGradient li {
+	display:block;
+	float: left;
+	color:#2C2D31;
+	padding: 5px 0px 5px 0px;
+}
+.ihkLevelTwo .SuccessGradient label {
+	padding-top: 3px;
+	display: block;
+}
+.ihkLevelTwo .SuccessGradient select {
+	margin-right: 10px;
+	width: 200px;
+}
+.ihkLevelTwo .SuccessGradient .signUpBtn {
+	padding:0px 6px 0px 6px;
+	margin: 0 10px 0 10px;
+	position: relative;
+	top: -3px;
+}
+.ihkLevelTwo .SuccessGradient .DropDownTxt {
+	margin-right:15px;
+	color:#737682;
+}
+.ihkLevelTwo .attachment-ss-featured-image {
+	width: 429px;
+	height: 313px;
+}
+/* why hk */
+
+.ihkLevelTwo .whyEmph a {
+	display: block;
+	cursor: pointer;
+	color: #ffffff;
+	text-decoration: none;
+}
+.ihkLevelTwo .whyEmph .grid_3 {
+	margin-bottom: 0px;
+}
+.ihkLevelTwo .whyEmph .arrowRW {
+	display: block;
+	padding: 16px 12px 6px 22px;
+	background-position: 12px 20px;
+	font-size: 108%;
+}
+.ihkLevelTwo .whyEmph .desc {
+	display: block;
+	padding: 12px 12px 0px 22px;
+	font-size: 100%;
+	color: #ABABAD;
+}
+.ihkLevelTwo .whyEmph a:hover .desc {
+	color: #ffffff;
+	text-decoration: underline;
+}
+/* superList */
+
+.ihkLevelTwo .superList {
+	margin-bottom: 10px;
+}
+.ihkLevelTwo .superList li {
+	margin-bottom: 20px;
+}
+.ihkLevelTwo .superList a {
+	text-decoration:none;
+	display: block;
+	color: #ffffff;
+	cursor: pointer;
+	width: 100%;
+}
+.ihkLevelTwo .superList .arrowRW {
+	display: block;
+	padding: 16px 12px 10px 22px;
+	background-position: 12px 20px;
+	font-size: 108%;
+}
+.ihkLevelTwo .superList .grid_2 .arrowRW {
+	min-height: 6.0em;
+}
+.ihkLevelTwo .superList .grid_3 .arrowRW {
+	min-height: 2.5em;
+}
+.ihkLevelTwo .sucList .grid_3 .arrowRW {
+	height: 4.4em;
+	padding-bottom: 0px;
+}
+.ihkLevelTwo .superList .grid_4 .arrowRW {
+	padding: 16px 12px 12px 22px;
+}
+.ihkLevelTwo .sucList .imgWrap {
+	background: #25262a;
+	height: 160px;
+	display: block;
+}
+.ihkLevelTwo .superList .grid_3 img {
+	width: 220px;
+}
+.ihkLevelTwo .superList .desc {
+	display: block;
+	padding: 12px 12px 0px 22px;
+	background: #F0F3F5;
+	color: #2C2D31;
+	font-size: 100%;
+}
+.ihkLevelTwo .superList .grid_2 .desc {
+	min-height: 7.0em;
+}
+.ihkLevelTwo .superList .grid_4 .desc {
+	min-height: 6.0em;
+}
+.ihkLevelTwo .sucList .grid_3 .desc {
+	
+	font-size: 85%;
+	padding-left: 12px;
+}
+.ihkLevelTwo .superList .desc a {
+	color: #C5001E;
+	padding-left: 10px;
+	display: block;
+	background-position: 0px 5px;
+	padding-bottom: 5px;
+}
+.ihkLevelTwo .superList .desc a:hover {
+	color: #A70019;
+	background-position: -960px 5px;
+}
+.ihkLevelTwo .sucList .desc a {
+	background-position: 0px 2px;
+}
+.ihkLevelTwo .sucList .desc a:hover {
+	background-position: -960px 2px;
+	text-decoration: underline;
+}
+.ihkLevelTwo .superList a.region {
+	font-style: italic;
+	padding-bottom: 10px;
+}
+.ihkLevelTwo .PullOut {
+	background: #ffffff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWY0ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left, #ffffff 2%, #F0F3F5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(2%, #ffffff), color-stop(100%, #F0F3F5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #ffffff 2%, #F0F3F5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ffffff 2%, #F0F3F5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ffffff 2%, #F0F3F5 100%); /* IE10+ */
+	background: linear-gradient(left, #ffffff 2%, #F0F3F5 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#F0F3F5', GradientType=1 ); /* IE6-8 */
+	overflow: hidden;
+	padding: 15px 0px 15px 15px;
+	border-left:1px dotted #E30022;
+}
+.ihkLevelTwo .PullOut h4 {
+	font-size:118%;
+	color:#2C2D31;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+}
+.ihkLevelTwo .PullOut h2 {
+	font-size:118%;
+	color:#2C2D31;
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+}
+.ihkLevelTwo .PullOut p {
+	padding: 0px;
+	margin: 15px 15px 15px 0px;
+	font-size: 108%;
+}
+.ihkLevelTwo .PullOut .forumBtn {
+	width: 187px;
+}
+.ihkLevelTwo .superList .contactInner {
+	min-height: 180px;
+}
+.ihkLevelTwo .superList .contactList li {
+	margin: 0px;
+}
+.ihkLevelTwo .superList .contactList a {
+	color: #E30022;
+}
+.ihkLevelTwo .superList .contactList a:hover {
+	color: #A70019;
+}
+.ihkLevelTwo .setupImg {
+	margin-bottom: 20px;
+}
