@@ -37,7 +37,7 @@ var CoinWidgetComCounter = 0;
 
 if (typeof CoinWidgetCom != 'object')
 var CoinWidgetCom = {
-	source: './'
+	source: '//' + document.domain + '/coinwidget/'
 	, config: []
 	, go :function(config) {
 		config = CoinWidgetCom.validate(config);
