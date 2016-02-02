@@ -1,0 +1,39 @@
+body {
+    font-family: Ubuntu, "Open Sans", Helvetica, Arial, sans-serif;
+    width: 80%;
+    min-width: 20cm;
+    margin: auto;
+}
+
+section {
+    width: calc(100% - 208px);
+    float: left;
+}
+
+aside {
+    width: 208px;
+    float: left;
+}
+
+footer {
+    clear: both;
+    margin-top: 10px;
+    font-size: 80%;
+    border-top: 1px solid #909090;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: normal;
+    color: grey;
+    line-height: 0;
+    margin: 0px;
+}
+
