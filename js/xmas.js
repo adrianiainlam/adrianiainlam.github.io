@@ -82,7 +82,6 @@ function sketch(p) {
       p.vertex(star_vertices[i].x, star_vertices[i].y);
     }
     p.endShape(p.CLOSE);
-    //p.endShape();
   }
   
   p.setup = function() {
@@ -109,4 +108,3 @@ function sketch(p) {
 
 var c = document.getElementById("tree-canvas");
 var inst = new Processing(c, sketch);
-
