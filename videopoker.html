@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Poker</title>
-    <meta charset="utf-8" />
-    
-    
+  <title>Video Poker</title>
+  <meta charset="utf-8" />
+  <!--
+       Copyright (c) 2014-2019 Adrian I. Lam
+       Contact: See <https://adrianiainlam.tk/contact>.
+
+       This work is free. You can redistribute it and/or modify it under the
+       terms of the Do What The Fuck You Want To Public License, Version 2,
+       as published by Sam Hocevar. See http://www.wtfpl.net/ for more
+       details.
+  -->
+
     <script>
     var $ = document.getElementById.bind(document);
     var cards=[];
@@ -269,6 +277,66 @@
     <button id="btnDeal" onclick="deal();">Deal</button>
     <button id="btnNew" onclick="init();">New</button>
     <br /><input type="checkbox" id="alwaysMax" />Always bet MAX</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Payout table</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Royal flush</td>
+          <td>250 (800 if bet max)</td>
+        </tr>
+        <tr>
+          <td>Straight flush</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Four of a kind</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Full House</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>Flush</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>Straight</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Three of a kind</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Two Pair</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Jacks or Better</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <footer>
+      <p>
+        Copyright (c) 2014-2019 Adrian I. Lam
+        <a href="https://adrianiainlam.tk/contact">(contact)</a>
+      </p>
+      <p>
+        This work is free. You can redistribute it and/or modify it under the
+        terms of the Do What The Fuck You Want To Public License, Version 2,
+        as published by Sam Hocevar. See
+        <a href="http://www.wtfpl.net/">http://www.wtfpl.net/</a> for
+        more details.
+      </p>
+    </footer>
 </body>
 
 </html>
